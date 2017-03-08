@@ -30,4 +30,14 @@ app.post('/', function (req, res) {
 
 + Route parameters
 
+Lấy các thông số truyền qua URL dựa vào vị trí của chúng trên URL. Ví dụ:
+```javascript
+app.get('/users/:userId/books/:bookId', function (req, res) {
+  res.send(req.params)
+})
+// VD: /users/trung/books/1
+// req.params: { "userId": "trung", "bookId": "1" }
+```
+
+
 
